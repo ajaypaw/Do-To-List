@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 50rem;
+    background: linear-gradient(135deg,#2775d3,#4ad62a);
+    padding: 10px;
+    
+}
+.Todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #4c5f5c;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.Todo-app h1{
+    /* color: #0361fa;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; */
+    font-family: 'Arial', sans-serif; /* Clean and modern font */
+  font-size: 28px; /* Large font size for emphasis */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray text color for a modern look */
+  text-align: center; /* Centered text */
+  margin-top: 0px; /* Space above the heading */
+  margin-bottom: 10px; /* Space below the heading */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  text-transform: uppercase; /* Convert text to uppercase */
+  background: linear-gradient(90deg, #007bff, #00d4ff); /* Gradient text background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Transparent text color to show gradient */
+  position: relative; /* Relative positioning for extra styling */
+  padding-bottom: 0px;
+  align-items: center;
+}
+.Todo-app h1 img{
+    width: 30px;
+  
+    margin-left: 0px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+
+}
+button{
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 20px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline element for layout */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /*border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px; */
+}
+button:hover{
+    background-color: #3d3e3d;
+}
+button:active {
+    background-color: #1e7e34; /* Even darker green when pressed */
+    transform: translateZ(5px); /* Slight downward shift on click */
+  }
+
+ul li{
+     list-style: none;
+    
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    /*animation: changeColor 5s infinite; */
+    list-style: none;
+   font-weight: bold;
+    width: 100%; /* Full width */
+  max-width: 600px; /* Max width for large screens */
+  padding: 10px 40px; /* Padding inside the textbox */
+  font-size: 16px; /* Font size */
+  font-family: 'Arial', sans-serif; /* Clean and modern font */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 20px; /* Rounded corners */
+ /* Remove default outline */
+  background-color: #f9f9f9; 
+  /* Light background color */
+   /* Text color */
+  /* Subtle shadow for depth */
+  
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius:  50% solid 5%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    border-color: #141212;
+    background-position: center;
+    top: 5px;
+    left: 5px; 
+   
+
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through solid 2px;
+
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    color: #141212;
+    line-height: 40px;
+    text-align: center;
+
+
+}
+ul li span:hover{
+    background-color: #e82020bd ;
+    border-radius: 50%;
+}
+
+@keyframes changeColor {
+    0% {  color: #FF5733; }  /* Color 1 */
+    25% { color: #33FF57; } /* Color 2 */
+    50% { color: #3357FF; } /* Color 3 */
+    75% { color: #F333FF; } /* Color 4 */
+    100% {color: #FF5733; } /* Back to Color 1 */
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Adjust body padding and font size for smaller screens */
+    body {
+      font-size: 16px;
+
+    }
+  
+    /* Responsive text box */
+    * {
+      width: 100%; /* Full width on small screens */
+      padding: 0px; /* Smaller padding */
+      font-size: 14px; /* Slightly smaller font size */
+    }
+  
+    /* Adjust heading for mobile */
+    h1 {
+      font-size: 22px; /* Smaller font size */
+      margin-bottom: 15px; /* Less margin below */
+    }
+  
+    /* Responsive buttons */
+    button {
+      
+      width: 60px;
+         /* Smaller padding for buttons */
+      font-size: 12px; /* Smaller font size */
+    }
+  
+    /* Any container divs */
+    .container {
+      padding: 10px; /* Reduce container padding */
+    }
+  }
